@@ -59,28 +59,32 @@ body {
 /* Galería centrada y deslizable */
 .gallery-wrapper {
   position: relative;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto 20px auto;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .gallery-scroll {
   display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  padding: 0 1em;
   gap: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 1em;
 }
 .gallery-scroll img {
   flex: 0 0 auto;
-  aspect-ratio: 4 / 5;
-  width: min(250px, 80vw);
-  max-height: calc(100dvh - 180px); /* usa altura visible real, menos espacio de encabezado/padding */
+  width: auto;
   height: auto;
+  max-height: 80vh;
+  max-width: 80vw;
+  aspect-ratio: 4 / 5;
   object-fit: contain;
-  border-radius: 12px;
   scroll-snap-align: center;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 .gallery-nav {
