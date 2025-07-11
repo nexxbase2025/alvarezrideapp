@@ -75,9 +75,10 @@ body {
 .gallery-scroll img {
   flex: 0 0 auto;
   aspect-ratio: 4 / 5;
-  width: min(250px, 80vw); /* Máximo 250px, pero se adapta a pantallas pequeñas */
+  width: min(250px, 80vw);
+  max-height: calc(100dvh - 180px); /* usa altura visible real, menos espacio de encabezado/padding */
   height: auto;
-  object-fit: cover; /* Rellena sin deformar */
+  object-fit: contain;
   border-radius: 12px;
   scroll-snap-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
